@@ -1,0 +1,12 @@
+<div id="main">
+    <div id="container">
+
+        <button (click)="addStudent()">Agregar estudiante</button>
+        <button (click)="getAll()">Cargar datos</button>
+        
+        <div *ngFor="let student of students">
+            <app-card [person]="student" (messageEvent)= "receiveMessage($event)"></app-card>
+        </div>
+
+    </div>
+</div>
