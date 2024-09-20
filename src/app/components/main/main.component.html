@@ -1,12 +1,28 @@
 <div id="main">
     <div id="container">
+        <div id="sectionForm">
 
-        <button (click)="addStudent()">Agregar estudiante</button>
-        <button (click)="getAll()">Cargar datos</button>
-        
-        <div *ngFor="let student of students">
-            <app-card [person]="student" (messageEvent)= "receiveMessage($event)"></app-card>
+            <form [formGroup]="myForm" class="form" (ngSubmit)="addStudent()"
+                style="width: 300px; height: 300px; border: 1px solid silver; display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 10px; border-radius: 4px;">
+                <label>Nombre</label>
+                <input formControlName="name">
+                <label>Apellido</label>
+                <input formControlName="lastName">
+                <label>Edad</label>
+                <input formControlName="age">
+                <button type="submit">Agregar</button>
+            </form>
+            <button (click)="getAll()">Cargar datos</button>
+        </div>
+    
+        <div id="sectionCards">
+    
+            <div *ngFor="let student of students">
+                <app-card [person]="student" (messageEvent)= "receiveMessage($event)"></app-card>
+            </div>
+    
         </div>
 
     </div>
+
 </div>

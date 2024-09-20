@@ -13,9 +13,22 @@
     margin: auto auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     border: 1px solid black;
+}
+
+#sectionCards{
+    height: 50%;
+    width: 100%;
+    border-radius: 1px solid black;
+    display: flex;
+}
+
+#sectionForm{
+    height: 50%;
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -57,4 +70,9 @@ p{
 img{
     height: 100px;
     width: 100px;
+}
+
+button{
+    height: 30px;
+    width: 70px;
 }
